@@ -1,14 +1,9 @@
 <script setup>
-import * as Icon from "./icons/index.js";
-import Data from "./icons/index.js";
 import { defineProps, reactive, ref, watch } from "vue";
 
   const themeData = reactive({
     isDark: false
   })
-
-  // light:
-
 
 
  function handleChangeThemes(){
