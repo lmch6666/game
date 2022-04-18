@@ -5,9 +5,9 @@ export { default as IconSupport}  from './IconSupport.vue'
 export { default as IconTooling}  from './IconTooling.vue'
 
 
-export default {
-  a:123,
-  b:456,
-  c:789,
-  "123":123,
-}
+// export default {
+//   a:123,
+//   b:456,
+//   c:789,
+//   "123":123,
+// }

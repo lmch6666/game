@@ -2,10 +2,16 @@
 import Nav from "./components/Nav.vue";
 import Saolei from "./components/Saolei.vue";
 import Footer from "./components/Footer.vue";
+import * as Icon from "./components/icons/index";
 import Game from "./game";
-import { reactive, ref, watch } from "vue";
+import {
+  ref,
+  watch,
+  getCurrentInstance,
+  computed,
+  onMounted,
+} from "vue";
 
-const btn = ref("btn");
 let count = Game.count;
 let time = Game.time;
 let flagnum = Game.flagnum;
@@ -17,10 +23,26 @@ let clickFn = Game.clickFn.bind(Game);
 let rightClickFn = Game.rightClickFn.bind(Game);
 let getTextColor = Game.getTextColor.bind(Game);
 
+const list = ref([1, 2, 3]);
+
+const itemRefs = ref([]);
+
+onMounted(() => {
+  console.log(itemRefs.value);
+});
 
 </script>
 
 <template>
+  <!-- <template v-for="i in 5" :key="i">
+      <Icon.IconCommunity ref="itemRefs"></Icon.IconCommunity>
+  </template> -->
+  <!-- <Icon.IconCommunity ref="iconref" @click="aaa()"></Icon.IconCommunity> -->
+  <ul>
+    <li v-for="item in list" ref="itemRefs">
+      {{ item }}
+    </li>
+  </ul>
   <Nav
     :time="time"
     :flagnum="flagnum"

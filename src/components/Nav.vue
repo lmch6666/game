@@ -16,9 +16,6 @@ import {
   defineComponent,
   reactive,
   ref,
-  defineProps,
-  defineEmits,
-  defineExpose,
   computed
 } from "vue";
 
