@@ -2,7 +2,7 @@
 import Nav from "./components/Nav.vue";
 import Saolei from "./components/Saolei.vue";
 import Footer from "./components/Footer.vue";
-import * as Icon from "./components/icons/index";
+// import * as Icon from "./components/icons/index";
 import Game from "./game";
 import {
   ref,
